@@ -165,8 +165,8 @@ a{
 .contenedor-4 {
     width: 80%;
     gap: 30px;
-    margin-top: -50px;
     margin: auto;
+    margin-top: -50px;
     display: flex;
     padding-top: 80px;
     padding-bottom: 80px;
@@ -225,6 +225,12 @@ a{
     justify-content: center;
     align-items: center;
 }
+
+.footer-social{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
   
   .footer-logo img {
     max-width: 150px;
@@ -271,8 +277,24 @@ a{
   .social-icons a:hover {
     color: #ffc800;
   }
+
+  .movil {
+    width: 50%;
+    display: flex;
+    justify-content: start;
+    align-items: end;
+}
   
-  @media screen and (max-width: 768px) {
+.header-mobile {
+    display: none;
+  }
+
+
+  @media screen and (max-width: 425px) {
+
+    .navegador{
+        display: none;
+    }
     .footer-container {
       flex-direction: column;
       align-items: center;
@@ -284,5 +306,155 @@ a{
     .footer-social {
       width: 100%;
     }
-  }
-  
+
+    .banner-img {
+        width: 100px;
+        border-radius: 50px;
+    }
+
+    .contenedor-2{
+        display: flex;
+        flex-direction: column;
+    }
+
+    .beneficios1, .beneficios2, .beneficios3, .beneficios4{
+        width: 100%;
+    }
+
+    .contenedor-3{
+        display: flex;
+        flex-direction: column;
+    }
+
+    .contenedor-3-1, .contenedor-3-2 {
+        display: flex;
+        flex-direction: column;
+        width: 90%;
+        padding: 20px;
+        border-radius: 30px;
+        background-color: rgb(255, 200, 0);
+    }
+
+    .contenedor-3-1-imagen {
+        display: flex;
+        flex-direction: column-reverse;
+        justify-content: center;
+        align-items: center;
+    }
+
+    .contenedor-4 {
+        width: 80%;
+        gap: 30px;
+        margin: auto;
+        margin-top: -50px;
+        display: flex;
+        padding-top: 80px;
+        padding-bottom: 80px;
+        color: white;
+        font-size: 30px;
+        justify-content: center;
+        flex-direction: column;
+    }
+    
+
+    .contenedor-4-1, .contenedor-4-2 {
+        width: 85%;
+        padding: 30px;
+        height: 500px;
+        background-image: url(/img/ChatGPT Image 18 abr 2025, 23_15_08.png);
+        background-size: cover;
+        background-position: 20% 58%;
+        border-radius: 50px;
+    }
+
+    .movil{
+        width: 100% !important;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+
+    .banner-1 {
+        width: 40%;
+        display: flex;
+        justify-content: space-around;
+        align-items: center;
+        padding: 20px;
+    }
+
+    .banner-2 {
+        width: 60%;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+
+    .banner-img {
+        width: 200px;
+        border-radius: 50px;
+    }
+
+    .contenedor-1 {
+        width: 100%;
+        height: 500px;
+        background-color: yellow;
+        border-radius: 0px 0px 60px 60px;
+        display: flex;
+        gap: 5px;
+    }
+
+    .header-mobile {
+        display: flex;
+        background-color: #1b1928;
+        padding: 15px;
+        color: white;
+      }
+    
+      .nav-top {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        width: 100%;
+        gap: 110px;
+    }
+
+    
+    .logo-mobile {
+        width: 130px;
+        height: 60px;
+        object-fit: cover;
+    }
+    
+      .hamburguesa-mobile {
+        font-size: 26px;
+        background: none;
+        border: none;
+        color: white;
+        cursor: pointer;
+      }
+    
+      .menu-mobile {
+        display: none;
+        flex-direction: column;
+        margin-top: 10px;
+        background-color: #1b1928;
+        padding: 10px 0;
+      }
+    
+      .menu-mobile a {
+        padding: 12px 20px;
+        text-decoration: none;
+        color: white;
+        font-weight: 500;
+        border-top: 1px solid rgba(255, 255, 255, 0.1);
+      }
+    
+      .menu-mobile a:hover {
+        background-color: #29263a;
+      }
+    
+      .menu-mobile.active {
+        display: flex;
+      }
+
+}

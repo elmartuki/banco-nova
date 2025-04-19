@@ -34,6 +34,24 @@
       </nav>
     </header>
 
+    <header class="header-mobile">
+      <nav class="nav-mobile">
+        <div class="nav-top">
+          <button id="btn-hamburguesa" class="hamburguesa-mobile">☰</button>
+          <img class="logo-mobile" src="img/a.png" alt="Banco Nova" />
+        </div>
+    
+        <div id="menu-mobile" class="menu-mobile">
+          <a href="#">Personas</a>
+          <a href="#">Empresa</a>
+          <a href="#">Sobre Nosotros</a>
+          <a href="#">Ayuda</a>
+        </div>
+      </nav>
+    </header>
+    
+    
+
     <section class="contenedor-1">
       <div class="banner-1">
         <h1>Tu banco, tu futuro. Gestión financiera 100% digital.</h1>
@@ -110,19 +128,12 @@
             <h1>Préstamos personales / hipotecarios</h1>
           </div>
           <div class="contenedor-3-1-imagen">
-            <div
-              style="
-                width: 50%;
-                display: flex;
-                justify-content: start;
-                align-items: end;
-              "
-            >
+            <div class="movil">
               <button class="boton-ver-mas">Ver mas</button>
             </div>
 
-            <div style="width: 50%">
-              <img width="250px" src="img/g.png" alt="" />
+            <div class="movil" style="width: 50%">
+              <img class="img-movil" width="250px" src="img/g.png" alt="" />
             </div>
           </div>
         </div>
@@ -131,19 +142,12 @@
             <h1>Tarjetas (crédito, débito, prepaga)</h1>
           </div>
           <div class="contenedor-3-1-imagen">
-            <div
-              style="
-                width: 50%;
-                display: flex;
-                justify-content: start;
-                align-items: end;
-              "
-            >
+            <div class="movil">
               <button class="boton-ver-mas">Ver mas</button>
             </div>
 
-            <div style="width: 50%">
-              <img width="250px" src="img/535.png" alt="" />
+            <div class="movil" style="width: 50%">
+              <img class="img-movil" width="250px" src="img/535.png" alt="" />
             </div>
           </div>
         </div>
@@ -175,8 +179,9 @@
         </div>
     
         <div class="footer-links">
-          <h4>Institucional</h4>
+          
           <ul>
+            <h4 style="color:#aaa;aaa;">Institucional</h4>
             <li><a href="#">Sobre nosotros</a></li>
             <li><a href="#">Términos y condiciones</a></li>
             <li><a href="#">Política de privacidad</a></li>
@@ -185,8 +190,8 @@
         </div>
     
         <div class="footer-links">
-          <h4>Ayuda</h4>
           <ul>
+            <h4 style="color:#aaa;aaa;">Ayuda</h4>
             <li><a href="#">Centro de ayuda</a></li>
             <li><a href="#">Contacto</a></li>
             <li><a href="#">Sucursales</a></li>
@@ -195,8 +200,9 @@
         </div>
     
         <div class="footer-social">
-          <h4>Seguinos</h4>
+          
           <div class="social-icons">
+            <h4 style="color:#aaa;aaa;">Seguinos</h4>
             <a href="#"><i class="fab fa-facebook-f"></i></a>
             <a href="#"><i class="fab fa-instagram"></i></a>
             <a href="#"><i class="fab fa-twitter"></i></a>
@@ -205,6 +211,15 @@
         </div>
       </div>
     </footer>
+
+    <script>
+      const btn = document.getElementById("btn-hamburguesa");
+      const menu = document.getElementById("menu-mobile");
+    
+      btn.addEventListener("click", () => {
+        menu.classList.toggle("active");
+      });
+    </script>
     
   </body>
 </html>
