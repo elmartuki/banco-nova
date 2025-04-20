@@ -7,6 +7,9 @@
     <link rel="stylesheet" href="css/css.css" />
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link rel="stylesheet" href="https://unpkg.com/leaflet/dist/leaflet.css" />
+    <script src="https://unpkg.com/leaflet/dist/leaflet.js"></script>
+
     <link
       href="https://fonts.googleapis.com/css2?family=Funnel+Sans:ital,wght@0,300..800;1,300..800&family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&family=Lato:wght@900&family=Noto+Sans:ital,wght@0,100..900;1,100..900&family=Raleway:ital,wght@0,700;1,700&family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&family=Rubik:ital,wght@0,300..900;1,300..900&display=swap"
       rel="stylesheet"
@@ -40,7 +43,7 @@
           <button id="btn-hamburguesa" class="hamburguesa-mobile">☰</button>
           <img class="logo-mobile" src="img/a.png" alt="Banco Nova" />
         </div>
-    
+
         <div id="menu-mobile" class="menu-mobile">
           <a href="#">Personas</a>
           <a href="#">Empresa</a>
@@ -49,8 +52,8 @@
         </div>
       </nav>
     </header>
-    
-    
+
+    <div id="map" style="height: 400px;"></div>
 
     <section class="contenedor-1">
       <div class="banner-1">
@@ -159,13 +162,19 @@
         <div class="contenedor-4-1">
           <div class="contenedor-4-1-titulo">
             <h1>Apple Pay</h1>
-            <p>Abrí la app Wallet,  presioná el signo “+”, ingresa los datos de tu tarjeta Brubank y empeza a pagar con Apple Pay.</p>
+            <p>
+              Abrí la app Wallet, presioná el signo “+”, ingresa los datos de tu
+              tarjeta Brubank y empeza a pagar con Apple Pay.
+            </p>
           </div>
         </div>
         <div class="contenedor-4-2">
           <div class="contenedor-4-1-titulo">
             <h1>Google Pay</h1>
-            <p>Descargá la app, vinculá tu tarjeta Visa Brubank y pagá directo con tu celular</p>
+            <p>
+              Descargá la app, vinculá tu tarjeta Visa Brubank y pagá directo
+              con tu celular
+            </p>
           </div>
         </div>
       </section>
@@ -175,11 +184,10 @@
       <div class="footer-container">
         <div class="footer-logo">
           <img src="/img/a.png" alt="Banco Nova" />
-          <p>Banco Nova S.A. © 2025<br>Todos los derechos reservados</p>
+          <p>Banco Nova S.A. © 2025<br />Todos los derechos reservados</p>
         </div>
-    
+
         <div class="footer-links">
-          
           <ul>
             <h4 style="color:#aaa;aaa;">Institucional</h4>
             <li><a href="#">Sobre nosotros</a></li>
@@ -188,7 +196,7 @@
             <li><a href="#">Seguridad</a></li>
           </ul>
         </div>
-    
+
         <div class="footer-links">
           <ul>
             <h4 style="color:#aaa;aaa;">Ayuda</h4>
@@ -198,9 +206,8 @@
             <li><a href="#">Preguntas frecuentes</a></li>
           </ul>
         </div>
-    
+
         <div class="footer-social">
-          
           <div class="social-icons">
             <h4 style="color:#aaa;aaa;">Seguinos</h4>
             <a href="#"><i class="fab fa-facebook-f"></i></a>
@@ -215,11 +222,22 @@
     <script>
       const btn = document.getElementById("btn-hamburguesa");
       const menu = document.getElementById("menu-mobile");
-    
+
       btn.addEventListener("click", () => {
         menu.classList.toggle("active");
       });
     </script>
-    
+
+<script>
+  var map = L.map('map').setView([-51.7, -59], 7);
+
+  L.tileLayer('https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png', {
+    attribution: '&copy; OpenStreetMap contributors'
+  }).addTo(map);
+
+  L.marker([-51.7, -59]).addTo(map)
+    .bindPopup('Islas Malvinas')
+    .openPopup();
+</script>
   </body>
 </html>
